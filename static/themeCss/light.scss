@@ -1,0 +1,182 @@
+.light {
+	background-color: #fff;
+	
+	
+	// 首页
+	.indexTop {background-color: #fff;}
+	.indexTop_search {
+		color: #8c9fad;
+		background-color: #f1f2f5;
+		.iconfont {
+			color: #8c9fad;
+		}
+	}
+	.downNavs {
+		background-color: #fff;
+		.flex_ac + .flex_ac {
+			border-top-color: #F1F2F5;
+			border-top-style: solid;
+			border-top-width: 1px;
+		}
+		.downNavs-text { color: #172841; } 
+		.iconfont{
+			color: #172841;
+		}
+	}
+	.downNavs::before {
+		border-bottom: 7px solid #fff;
+	}
+	.indexNews {
+		border-bottom: 1px solid #f1f2f5;
+	}
+	.hotCoin {
+		.down {
+			color: #d9343e;
+		}
+		.up {
+			color: #15b383;
+		}
+		.money {
+			color: #8c9fad;
+		}
+	}
+	.buyFast {
+		background-color: #f7f7fb;
+	}
+	.indexCoinLi {
+		border-top: 10px solid #F7F7FB;
+		.coinTab {
+			border-bottom: 1px solid #f1f2f5;
+			view {
+				color: #949faa;
+			}
+			.on {
+				color: #1762e6;
+			}
+			.on:after {
+				background-color: #1762e6;
+			}
+		}
+		.coinSort view {
+			color: #949faa;
+		}
+	
+		.coinItem {
+			border-bottom: 1px solid #f1f2f5;
+			.coinName {
+				view {
+					color: #c5cfd5;
+				}
+			}
+			.up_down {
+				color: #fff;
+				background-color: #8c9fad;
+			}
+			.up_down.down {
+				background-color: #d9343e;
+			}
+			.up_down.up {
+				background-color: #15b383;
+			}
+		}
+	}
+	
+	.sideBg {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	.sideBox {
+		.sideNav {
+			border-bottom: 1px solid #f1f2f5;
+			view {
+				color: #8c9fad;
+			}
+			.on {
+				color: #1762e6;
+				border-bottom: 2px solid #1762e6;
+			}
+		}
+		.sideCoin {
+			border-bottom: 1px solid #f1f2f5;
+			.up {
+				color: #15b383;
+			}
+			.down {
+				color: #d9343e;
+			}
+		}
+		.sideCoin.curCoin {
+			background-color: #f1f2f5;
+		}
+	}
+	
+	// 行情
+	.topCenter {
+		color: #172841;
+	}
+	.navOneBox {
+		border: 1px solid #e8ecef;
+	}
+	.navOneBox view {
+		color: #8c9fad;
+	}
+	.navOneBox .on {
+		background-color: #1762e6;
+		color: #fff;
+	}
+	.coinListBox {
+		border-bottom: 1px solid #f1f2f5;
+	}
+	.coinListBox view {
+		color: #8c9fad;
+	}
+	.coinListBox .on {
+		color: #1762e6;
+	}
+	.coinListBox .on:after {
+		background-color: #1762e6;
+	}
+	.coinSortType,.scrollView {background-color: #fff;}
+	.listName {
+		color: #8c9fad;
+	}
+	.li_name {
+		color: #8c9fad;
+	}
+	.sortBox view {
+		color: #8c9fad;
+	}
+	.coinLiBox {
+		border-bottom: 1px solid #f1f2f5;
+	}
+	.coinName view {
+		color: #8c9fad;
+	}
+	
+	// 交易
+	.topNavs {
+		border: 1px solid #f7f7fb;
+	}
+	.curBuyBox {
+		border-top-color: #fff;
+	}
+	.sideBox {
+		background-color: #fff;
+		.iconfont {
+			color:  #172841;
+		}
+	}
+	.topNavsBox {
+		background-color: #fff;
+	}
+	.tradeTop {
+		background-color: #fff;
+	}
+	.downCont {
+		background-color: #fff;
+	}
+	
+	// 资产
+	.infos {
+		border-bottom: 10px solid #fff;
+	}
+}

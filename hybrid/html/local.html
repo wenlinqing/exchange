@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>K线</title>
+		<link rel="stylesheet" type="text/css" href="css/kline.css" />
+		<style type="text/css">
+			#tv_chart_container {width: 100%;height: 50vh;}
+			iframe {width: 100%;height: 100% !important;}
+			.pane-legend-line.pane-legend-wrap.main.expand-line {padding-right: 5px;}
+			.times span {width: 14.66%;height: 30px;line-height: 30px;color: #7c8bac;font-size: 16px;text-align: center;font-size: 14px;}
+			.times span.active {position: relative;color: #157fd5;font-weight: 500;}
+			.times span.active:before {content: " ";position: absolute;bottom: -2px;left: 10%;z-index: 1;width: 80%;height: 3px;background-color: #157fd5;border-radius: 3px;}
+		</style>
+		<script type="text/javascript">
+			var kLineData = null
+			let marketValue = window.location.search.match(/coinName=([^&]*)/)
+			marketValue = marketValue[1].split('/')
+			marketValue = (marketValue[0]+marketValue[1]).toLocaleLowerCase()
+		</script>
+		<!--封装了一个发布订阅模式-->
+		<script src="./event.js"></script>
+		<!--图表库js-->
+		<script src="./charting_library/charting_library.min.js"></script>
+		<!--websocket-->
+		<script src="./websocket.js"></script>
+		<!--图表数据获取-->
+		<script src="./datafeed.js"></script>
+		<!--图表配置-->
+		<script src="./chartConfig.js"></script>
+	</head>
+
+	<body>
+		<div id="app" class="page" style="display: none;" :style="{display: 'block'}">
+			<div  :style="'height:'+statusBar+'px'" style="position: fixed;top:0;left:0;width: 100%;z-index: 99999999;background-color: #101F31;"></div>
+			<div :style="'height:'+statusBar+'px'"></div>
+			<div class="topSticky" :style="'top:'+statusBar+'px'">
+				<div class="flex flex_ac">
+					<div class="k_back" @click="back()">
+						<image src="./static/back.png" mode="widthFix" style="width:20px"></image>
+					</div>
+					<div class="k_more">
+						<image src="./static/more2.png" mode="widthFix" style="width:18px"></image>
+					</div>
+					<span>{{coinName}}</span>
+				</div>
+				<div class="flex k_top_r" style="padding-right: 15px;">
+					<image :src="favo?'./static/startOn.png':'./static/start.png'" mode="widthFix" style="width:18px;height:18px" @click="handlefavo"></image>
+					<image src="./static/full.png" mode="widthFix" style="width:18px;height:18px"></image>
+				</div>
+			</div>
+			<div style="height: 40px;"></div>
+			<div class="head flex flexbetween">
+				<!-- <div class="price">
+					<span class="price-label">{{txData.lastPrice || 0}}</span>
+					<span class="price-value">≈ ${{txData.lastPrice || 0}}</span>
+				</div>
+				<div class="head-item">
+					<div class="head-item-cell">
+						<span class="hic-label">涨跌幅</span>
+						<span class="hic-value" :class="txData.upFlag==1?'price-green':'price-red'">{{txData.upRate || 0}}</span>
+					</div>
+					<div class="head-item-cell">
+						<span class="hic-label">高</span>
+						<span class="hic-value">{{txData.high || 0}}</span>
+					</div>
+				</div>
+				<div class="head-item">
+					<div class="head-item-cell">
+						<span class="hic-label">24H</span>
+						<span class="hic-value">{{txData.volume || 0}}</span>
+					</div>
+					<div class="head-item-cell">
+						<span class="hic-label">低</span>
+						<span class="hic-value">{{txData.low || 0}}</span>
+					</div>
+				</div> -->
+				<div class="left-head">
+					<div style="font-size: 30px;" :style="txData.change>=0?'color: #15B383;':'color:#D9343E'">{{txData.price}}</div>
+					<div class="flex_ac">
+						<div class="head-lightColor" style="font-size: 10px;margin-right: 10px;">≈{{txData.cnyPrice}}CNY</div>
+						<div style="font-size: 12px;" :style="txData.change>=0?'color: #15B383;':'color:#D9343E'">{{txData.change>=0?'+'+txData.change:txData.change}}%</div>
+					</div>
+				</div>
+				<div class="right-head">
+					<div class="flexbetween" style="height: 20px;">
+						<span class="head-lightColor">{{lang=='zh'?'高':'high'}}</span>
+						<span class="haed-darkColor">{{txData.high}}</span>
+					</div>
+					<div class="flexbetween" style="height: 20px;">
+						<span class="head-lightColor">{{lang=='zh'?'低':'low'}}</span>
+						<span class="haed-darkColor">{{txData.low}}</span>
+					</div>
+					<div class="flexbetween" style="height: 20px;"> 
+						<span class="head-lightColor">24H</span>
+						<span class="haed-darkColor">{{txData.dayVolume}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="tabs">
+				<div class="times" id="interval">
+					<span data-value="1">{{lang=='zh'?'分时':'Line'}}</span>
+					<!-- <span class="active" data-value="5">5分钟</span> -->
+					<span  data-value="15">{{lang=='zh'?'15分钟':'15min'}}</span>
+					<span data-value="30">{{lang=='zh'?'30分钟':'30min'}}</span>
+					<span data-value="60">{{lang=='zh'?'1小时 ':'1hour'}}</span>
+					<span class="active" data-value="240">{{lang=='zh'?'4小时':'4hour'}}</span>
+					<span data-value="1D">{{lang=='zh'?'日线':'1day'}}</span>
+				</div>
+			</div>
+			<!-- <div class="charts-border">
+				<div id="main" class="charts"></div>
+				<div class="charts-label">
+					<div class="charts-MA5">MA5:{{MA5 || 0}}</div>
+					<div class="charts-MA10">MA10:{{MA10 || 0}}</div>
+					<div class="charts-MA30">MA30:{{MA30 || 0}}</div>
+				</div>
+				<div class="charts-bar-label">
+					<div class="charts-MA5">MA5:{{volMA5 || 0}}</div>
+					<div class="charts-MA10">MA10:{{volMA10 || 0}}</div>
+				</div>
+			</div> -->
+			<div class="chart">
+				<div id="tv_chart_container"></div>
+			</div>
+			
+			<div class="category">
+				<div class="category-item-wrap" v-for="(item,index) in categoryList" :key="index">
+					<div @click="switchCategory(item.value)" class="category-item">
+						<span class="category-item-text" :class="{'category-item-text-active':category==item.value}">{{item.label}}</span>
+						<div class="category-item-bar" :class="{'category-item-bar-active':category==item.value}"></div>
+					</div>
+				</div>
+			</div>
+			<div class="category-main">
+				<div v-if="category==1" class="depth">
+					<div class="depth-head">
+						<div class="depth-head-left">
+							<div class="depth-head-label depth-head-left-index">{{lang=='zh'?'买盘':'Buy'}}</div>
+							<div class="depth-head-label">{{lang=='zh'?'数量':'Amount'}}({{coinName.slice(0,coinName.indexOf('/'))}})</div>
+						</div>
+						<div class="depth-head-center">
+							<div class="depth-head-label">{{lang=='zh'?'价格':'Price'}}({{coinName.slice(coinName.indexOf('/')+1)}})</div>
+						</div>
+						<div class="depth-head-right">
+							<div class="depth-head-label">{{lang=='zh'?'数量':'Amount'}}({{coinName.slice(0,coinName.indexOf('/'))}})</div>
+							<div class="depth-head-label depth-head-right-index">{{lang=='zh'?'卖盘':'Sell'}}</div>
+						</div>
+					</div>
+					<div class="depth-main">
+						<div class="depth-main-item">
+							<div class="dmi-cell" style="justify-content: flex-end;" v-for="(item,index) in buyList" :key="index">
+								<div class="dmi-cell-bg" :style="{'width': `${item.width}%`,'backgroundColor':'#303f38'}"></div>
+								<div class="dmi-cell-item">
+									<div class="dmi-cell-index">{{index+1}}</div>
+									<div class="dmi-cell-num">{{item.volume || '--'}}</div>
+									<div class="buyList-dmi-cell-price" style="padding-right: 5px;">{{item.price || '--'}}</div>
+								</div>
+							</div>
+						</div>
+						<div class="depth-main-item">
+							<div class="dmi-cell" v-for="(item,index) in sellList || 10" :key="index">
+								<div class="dmi-cell-bg" :style="{'width': `${item.width}%`,'backgroundColor':'#3c2a2e'}"></div>
+								<div class="dmi-cell-item">
+									<div class="sellList-dmi-cell-price" style="padding-left: 5px;">{{item.price || '--'}}</div>
+									<div class="dmi-cell-num" style="text-align: right;">{{item.volume || '--'}}</div>
+									<div class="dmi-cell-index" style="text-align: right;">{{index+1}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div v-else-if="category==2" class="transaction">
+					<div class="transaction-head">
+						<div class="transaction-head-item tmc-time">{{lang=='zh'?'时间':'Time'}}</div>
+						<div class="transaction-head-item tmc-type">{{lang=='zh'?'方向':'Direction'}}</div>
+						<div class="transaction-head-item tmc-price">{{lang=='zh'?'价格':'Price'}}</div>
+						<div class="transaction-head-item tmc-num">{{lang=='zh'?'数量':'Amount'}}</div>
+					</div>
+					<div class="transaction-main">
+						<div class="transaction-main-cell" v-for="(item,index) in dealHis || 10" :key="index">
+							<span class="tmc-label tmc-time">{{item.time || '--'}}</span>
+							<span class="tmc-label tmc-type" :style="{color:item.type==1?'#38ad70':'#fe5c57'}">{{item.type==1?lang=='zh'?'买入':'Buy':lang=='zh'?'卖出':'Sell'}}</span>
+							<span class="tmc-label tmc-price">{{item.price || '--'}}</span>
+							<span class="tmc-label tmc-num">{{item.volume || '--'}}</span>
+						</div>
+					</div>
+				</div>
+				<div v-else="category==3" class="introduction">
+					<div class="introduction-name">{{lang=='zh'?'暂无简介':'No introduction'}}</div>
+					<!-- <div class="introduction-name">{{tokenInfo.tokenName || '--'}}</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">发行时间</span>
+						<span class="introduction-cell-value">{{tokenInfo.issueDate || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">发行总量</span>
+						<span class="introduction-cell-value">{{tokenInfo.totalSupply || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">流通总量</span>
+						<span class="introduction-cell-value">{{tokenInfo.nowSupply || '--'}}</span>
+					</div>
+
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">众筹价格</span>
+						<span class="introduction-cell-value">{{tokenInfo.price || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">白皮书</span>
+						<span class="introduction-cell-value">{{tokenInfo.whitePaper || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">官网</span>
+						<span class="introduction-cell-value">{{tokenInfo.webSite || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">区块查询</span>
+						<span class="introduction-cell-value">{{tokenInfo.exploereSite || '--'}}</span>
+					</div>
+					<div class="introduction-label">简介</div>
+					<div class="introduction-value">{{tokenInfo.remark || '--'}}</div> -->
+				</div>
+			</div>
+			<div style="height:60px"></div>
+			<div class="btns">
+				<div @click="send" class="btn btn-green">{{lang=='zh'?'买入':'Buy'}}</div>
+				<div @click="send" class="btn btn-red">{{lang=='zh'?'卖出':'Sell'}}</div>
+			</div>
+
+
+		</div>
+		<script type="text/javascript" src="js/uni.webview.1.5.2.js"></script>
+		<script type="text/javascript" src="js/qs.js"></script>
+		<script type="text/javascript" src="js/axios.js"></script>
+		
+		
+		
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/mock.js"></script>
+		<script type="text/javascript" src="js/kline.js"></script>
+		
+		
+		<!--页面总统js 初始化图表库 绑定点击事件等-->
+		<script src="./index.js"></script>
+		<!-- 拦截点击logo跳转 -->
+		<script type="text/javascript">
+			function plusReady() {
+				var ws = plus.webview.currentWebview();
+				ws.overrideUrlLoading({
+					mode: 'reject'
+				}, function(e) {
+					console.log('拦截跳转 url: ' + e.url);
+				})
+				}
+				document.addEventListener('plusready', plusReady, false);
+		</script>
+	</body>
+	<script>
+	
+	</script>
+</html>

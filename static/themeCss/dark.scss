@@ -1,0 +1,384 @@
+.dark {
+	background-color: $darkBGColor;
+	
+	// 首页
+	.indexTop {
+		background-color: #1B222D;
+		.iconfont {
+			color: #8C9FAD;
+		}
+	}
+	.banner {
+		background-color: $darkWrapBGColor;
+	}
+	.indexTop_search {
+		color: #8C9FAD;
+		background-color: $darkWrapBGColor;
+	}
+	.downNavs {
+		background-color: #1F334D;
+		.flex_ac + .flex_ac {
+			border-top-color: #283752;
+			border-top-style: solid;
+			border-top-width: 1px;
+		}
+		.downNavs-text { color: #8C9FAD; } 
+		.iconfont{
+			color: #8C9FAD;
+		}
+	}
+	.downNavs::before {
+		border-bottom: 7px solid #1F334D;
+	}
+	.indexNews {
+		background-color: $darkWrapBGColor;
+		border-bottom: 1px solid #283752;
+		.iconfont {color: #8C9FAD;};
+		.txtEllip {color: #8C9FAD;}
+	}
+	.hotCoin {
+		background-color: $darkWrapBGColor;;
+		.coinName {color: #C2CCDE;}
+		.down {
+			color: #d9343e;
+		}
+		.up {
+			color: #15b383;
+		}
+		.money {
+			color: #8c9fad;
+		}
+	}
+	.buyFast {
+		background-color: #1B222D;
+	}
+	.indexNavs {
+		background-color: $darkWrapBGColor;
+		.navsItem {
+			color: #C5CFD5;
+		}
+	}
+	.indexCoinLi {
+		background-color: $darkWrapBGColor;
+		border-top: 10px solid #1B222D;
+		.coinTab {
+			// border-bottom: 1px solid #f1f2f5;
+			view {
+				color: #949faa;
+			}
+			.on {
+				color: #1762e6;
+			}
+			.on:after {
+				background-color: #1762e6;
+			}
+		}
+		.coinSort view {
+			color: #8C9FAD;
+		}
+		.price {color: #C5CFD5;}
+		.coinItem {
+			// border-bottom: 1px solid #f1f2f5;
+			.coinName {
+				color: #c5cfd5;
+				view {
+					color: #8C9FAD;
+				}
+			}
+			.up_down {
+				color: #fff;
+				background-color: #8c9fad;
+			}
+			.up_down.down {
+				background-color: #d9343e;
+			}
+			.up_down.up {
+				background-color: #15b383;
+			}
+		}
+	}
+	.sideBg {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	.sideCont {
+		background-color: $darkWrapBGColor;
+		.name {color: #C5CFD5;}
+		.idxNav {color: #C5CFD5;}
+		.navs {color: #C5CFD5;}
+	}
+	
+	
+	
+	// 行情
+	.topCenter {
+		color: #C5CFD5;
+	}
+	.navOneBox {
+		border: 1px solid #283752;
+	}
+	.coinListBox {
+		border-bottom: 1px solid #f1f2f5;
+	}
+	.coinSortType,.scrollView {background-color: $darkBGColor;}
+	.coinListBox view {
+		color: #8c9fad;
+	}
+	.coinListBox .on {
+		color: #1762e6;
+	}
+	.coinListBox .on:after {
+		background-color: #1762e6;
+	}
+	.listName {
+		color: #8c9fad;
+	}
+	.li_name {
+		color: #8c9fad;
+	}
+	.sortBox view {
+		color: #8c9fad;
+	}
+	.coinName {
+		color: #C5CFD5;
+		view {color: #3F506E;}
+	}
+	.allNum {color: #C5CFD5;}
+	
+	// 交易
+	.sideBox {
+		background-color: $darkWrapBGColor;
+		color: #C5CFD5 ;
+		.sideTop {
+			color: #C5CFD5;
+		}
+		.sideCoin {
+			border-bottom: 1px solid #283752;
+			.name {
+				color: #C5CFD5;
+			}
+		}
+	}
+	.topNavsBox {
+		background-color: $darkWrapBGColor;
+		.topNavs {
+			border: 1px solid #283752;
+		}
+	}
+	.tradeTop {
+		background-color: $darkWrapBGColor;
+		.top_lt {
+			color: #C5CFD5;
+		}
+		.up {
+			color: #15b383;
+		}
+		.down {
+			background-color: rgba(217, 52, 62, 0.1);
+			color: #d9343e;
+		}
+		.iconfont {
+			color: #C5CFD5;
+		}
+		.downCont {
+			background-color: #1F334D;
+			.flex{
+				color: #C5CFD5;
+			}
+			.flex + .flex {
+				border-top: 1px solid #283752;
+			}
+		}
+		.downCont::before {
+			border-bottom: 6px solid #1F334D;
+		}
+	}
+	.trades {
+		background-color: $darkWrapBGColor;
+		.priceBox {
+			border: 1px solid #283752;
+			color: #C5CFD5;
+			.priceBtn {
+				border-left: 1px solid #283752;
+				color: #C5CFD5;
+			}
+		}
+	}
+	.curBuyBox {
+		border-top-color: $darkBGColor;
+		background-color: $darkWrapBGColor;
+		.curBox_tt {color: #C5CFD5;}
+		.curItem {
+			.flex1 view {color: #C5CFD5;}
+		}
+	}
+	
+	
+	
+	// 资产
+	.tradeTag {
+		background-color: $darkWrapBGColor;
+		border-bottom: 1px solid #283752;
+		.on {
+			color: #1762e6;
+			border-bottom: 2px solid #1762e6;
+		}
+	}
+	
+	.infos {
+		background-color: $darkWrapBGColor;
+		color: #8C9FAD;
+		padding: 15px;
+		border-bottom: 10px solid $darkBGColor;
+		.text {
+			color: #8c9fad;
+		}
+		.num {
+			color: #C5CFD5;
+		}
+	}
+	
+	.coinFilter {
+		background-color: $darkWrapBGColor;
+		padding: 5px 15px;
+		border-bottom: 1px solid #283752;
+		.filter_lt label {
+			color: #8c9fad;
+		}
+		.filter_R {
+			position: relative;
+			width: 100px;
+			image {
+				position: absolute;
+				left: 10px;
+				top: 50%;
+				margin-top: -7px;
+			}
+			input {
+				height: 27px;
+				border-radius: 12px;
+				border: 1px solid #f1f2f5;
+				padding-left: 30px;
+			}
+		}
+	}
+	
+	.coinList {
+		background-color: $darkWrapBGColor;
+		border-bottom: 1px solid #283752;
+		.coin_N {
+			font-size: 32rpx;
+			color: #1762e6;
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+		.tt {
+			color: #8c9fad;
+			margin-bottom: 5px;
+		}
+		.num {
+			color: #C5CFD5;
+		}
+		.other {
+			color: #8c9fad;
+			font-weight: bold;
+		}
+	}
+	
+	.backBox {
+		height: 44px;
+		.goBack {
+			width: 45px;
+			height: 44px;
+			image {
+				width: 16px;
+			}
+		}
+		.title {
+			font-weight: bold;
+			font-size: 40rpx;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+		}
+	}
+	
+	.bottomBox {
+		padding: 5px 0;
+		.bt_item {
+			text-align: center;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.bt_item view {
+			width: 40px;
+			height: 40px;
+			background: #ffffff;
+			box-shadow: 0px 0px 4px 1px rgba(1, 50, 136, 0.1);
+			border-radius: 20px;
+			padding: 10px;
+			margin: 0 auto 4px;
+			image {
+				width: 100%;
+			}
+		}
+	}
+	.noList {
+		min-height: 300px;
+		color: #c5cfd5;
+		image {
+			display: block;
+			margin: 0 auto 20px;
+		}
+	}
+	.recordBox {
+		padding: 15px;
+		.record_TT {
+			padding-bottom: 15px;
+			font-size: 40rpx;
+			font-weight: bold;
+		}
+		.liBox.coinList {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.liBox .coin_N {
+			font-size: 32prx;
+			color: #172841;
+			font-weight: bold;
+		}
+		.liBox .tt {
+			font-size: 28prx;
+			color: #8c9fad;
+		}
+		.liBox .num {
+			font-weight: bold;
+		}
+		.dot {
+			width: 10px;
+			justify-content: flex-end;
+			align-items: flex-end;
+			padding-bottom: 3px;
+		}
+	}
+	
+	.dt_item {
+		margin: 0 15px;
+		padding: 15px 0;
+		border-bottom: 1px solid #f1f2f5;
+	}
+	.dt_item label {
+		width: 100px;
+		flex: 0 0 auto;
+		color: #8c9fad;
+	}
+	.dt_item_r {
+		word-break: break-all;
+		text-align: right;
+		font-size: 32rpx;
+		view {
+			margin-top: 5px;
+			color: #8c9fad;
+		}
+	}
+}

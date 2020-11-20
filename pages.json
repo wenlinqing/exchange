@@ -1,0 +1,705 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/component/login",
+			"style" : {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/newsList",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/newsDetail",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/activation",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/activation_record",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/activation_record_detail",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/component/password",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/component/importWords",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/myAccount",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/accountDetail",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/detailMore",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/recharge",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/withdrawal",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/transfer",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/choseAccount",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/choseCoin",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/adress",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/adressNew",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/record",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/myAccount/record_detail",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/component/backWord/backWord",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/component/backWord/backWordStepOne",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/component/backWord/backWordStepTwo",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/quotes/index",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/quotes/kLine",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/quotes/search",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/trade/index",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/trade/list",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/trade/detail",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/aboutUs",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/feedBack",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/setUp",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/address",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/addAdr",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/editAddr",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/modifyLogin"
+		},
+		{
+			"path": "pages/system/modifyPwd"
+		},
+		{
+			"path": "pages/system/securityCenter",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/management/manage",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/management/create",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/management/accountDetail",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/management/renamed",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/management/backupPrivateKey",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/subscribe/subscribe",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/subscribe/subscribeList",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/pool/pool",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/pool/poolDetail",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/pool/pool_record",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/pool/pool_record_detail",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/income/income",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/income/income_record",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/share",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/receive",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/receiveHuiyuan",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/trade/fiatCurrency/fiatCurrency",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/index/ecology",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/webView",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/webView2",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/network",
+			"style": {
+				"navigationStyle": "custom",
+				"scrollIndicator": "none", //隐藏滚动条
+				"app-plus": {
+					"scrollIndicator": "none",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/system/gesturePwd"
+		},
+		{
+			"path": "pages/contract/contract"
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#FFFFFF",
+		"navigationStyle": "custom",
+		"app-plus": {
+			"scrollIndicator": "none",
+			"bounce": "none"
+		}
+	},
+	"tabBar": {
+		"color": "#B0C3D2",
+		"selectedColor": "#1762E6",
+		"backgroundColor": "#ffffff",
+		"borderStyle":"white",
+		"fontSize":"12px",
+		"spacing":"5px",
+		"iconWidth":"24px",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/part1.png",
+				"selectedIconPath": "static/part1On.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/quotes/index",
+				"iconPath": "static/part2.png",
+				"selectedIconPath": "static/part2On.png",
+				"text": "行情"
+			},
+			{
+				"pagePath": "pages/trade/index",
+				"iconPath": "static/part3.png",
+				"selectedIconPath": "static/part3On.png",
+				"text": "交易"
+			},
+			{
+				"pagePath": "pages/contract/contract",
+				"iconPath": "static/part5.png",
+				"selectedIconPath": "static/part5On.png",
+				"text": "合约"
+			},
+			{
+				"pagePath": "pages/myAccount/myAccount",
+				"iconPath": "static/part4.png",
+				"selectedIconPath": "static/part4On.png",
+				"text": "资产"
+			}
+		]
+	}
+}
